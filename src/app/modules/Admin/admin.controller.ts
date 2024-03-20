@@ -40,7 +40,20 @@ const getById = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+const update = catchAsync(async (req: Request, res: Response) => {
+  const { id } = req.params;
+
+  const result = await AdminService.updateIntoDB(id, req.body);
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Admin data updated!",
+    data: result,
+  });
+});
+
 export const AdminController = {
   getAllFromDB,
   getById,
+  update,
 };
