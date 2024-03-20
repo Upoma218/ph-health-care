@@ -30,6 +30,10 @@ const getAllFromDB = async (params: any, options: any) => {
     });
   }
 
+  andCondions.push({
+    isDeleted: false,
+  });
+
   //console.dir(andCondions, { depth: 'inifinity' })
   const whereConditons: Prisma.AdminWhereInput = { AND: andCondions };
 
