@@ -9,7 +9,7 @@ const createAdminIntoDB = async (data: any) => {
   const userData = {
     email: data.admin.email,
     password: hashedPassword,
-    role: UserRole.ADMIN,
+    role: UserRole.admin,
   };
 
   const result = await prisma.$transaction(async (transactionClient) => {
