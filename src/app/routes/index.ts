@@ -2,6 +2,9 @@ import express from "express";
 import { AdminRoutes } from "../modules/Admin/admin.routes";
 import { AuthRoutes } from "../modules/Auth/auth.routes";
 import { DoctorRoutes } from "../modules/Doctor/doctor.route";
+import { DoctorScheduleRoutes } from "../modules/DoctorSchedule/doctorSchedule.route";
+import { PatientRoutes } from "../modules/Patient/patient.route";
+import { ScheduleRoutes } from "../modules/Schedule/schedule.routes";
 import { SpecialitiesRoutes } from "../modules/Specialities/specialities.routes";
 import { userRoutes } from "../modules/User/user.routes";
 
@@ -27,6 +30,18 @@ const moduleRoutes = [
   {
     path: "/doctor",
     route: DoctorRoutes,
+  },
+  {
+    path: "/patient",
+    route: PatientRoutes,
+  },
+  {
+    path: "/schedule",
+    route: ScheduleRoutes,
+  },
+  {
+    path: "/doctor-schedule",
+    route: DoctorScheduleRoutes,
   },
 ];
 
