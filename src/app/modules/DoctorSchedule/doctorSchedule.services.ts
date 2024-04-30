@@ -102,10 +102,16 @@ const getAllFromDB = async (
   };
 };
 
-const getByIdFromDB = async (id: string): Promise<DoctorSchedules | null> => {
+const getByIdFromDB = async (
+  doctorId: string,
+  scheduleId: string
+): Promise<DoctorSchedules | null> => {
   const result = await prisma.doctorSchedules.findUnique({
     where: {
-      id,
+      doctorId_scheduleId: {
+        doctorId,
+        scheduleId,
+      },
     },
     include: {
       doctor: true,
@@ -116,12 +122,16 @@ const getByIdFromDB = async (id: string): Promise<DoctorSchedules | null> => {
 };
 
 const updateIntoDB = async (
-  id: string,
+  doctorId: string,
+  scheduleId: string,
   payload: Partial<DoctorSchedules>
 ): Promise<DoctorSchedules | null> => {
   const result = await prisma.doctorSchedules.update({
     where: {
-      id,
+      doctorId_scheduleId: {
+        doctorId,
+        scheduleId,
+      },
     },
     data: payload,
     include: {
@@ -131,7 +141,6 @@ const updateIntoDB = async (
   });
   return result;
 };
-
 const deleteFromDB = async (
   user: any,
   scheduleId: string

@@ -36,8 +36,11 @@ const getAllFromDB = catchAsync(
 );
 
 const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const result = await DoctorScheduleService.getByIdFromDB(id);
+  const { doctorId, scheduleId } = req.params; // Extract doctorId and scheduleId from req.params
+  const result = await DoctorScheduleService.getByIdFromDB(
+    doctorId,
+    scheduleId
+  ); // Pass doctorId and scheduleId to getByIdFromDB method
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
@@ -47,8 +50,12 @@ const getByIdFromDB = catchAsync(async (req: Request, res: Response) => {
 });
 
 const updateIntoDB = catchAsync(async (req: Request, res: Response) => {
-  const { id } = req.params;
-  const result = await DoctorScheduleService.updateIntoDB(id, req.body);
+  const { doctorId, scheduleId } = req.params; // Extract doctorId and scheduleId from req.params
+  const result = await DoctorScheduleService.updateIntoDB(
+    doctorId,
+    scheduleId,
+    req.body
+  ); // Pass doctorId, scheduleId, and req.body to updateIntoDB method
   sendResponse(res, {
     statusCode: httpStatus.OK,
     success: true,
