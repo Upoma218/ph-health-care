@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "C:\\Web Development Next Level batch-2\\PH-HealthCare\\PH-HealthCare-Server\\logs\\winston\\errors\\.3fef36f69972c2883d7f16a5087cff78ebe998c9-audit.json",
+    "files": [
+        {
+            "date": 1715567223343,
+            "name": "C:\\Web Development Next Level batch-2\\PH-HealthCare\\PH-HealthCare-Server\\logs\\winston\\errors\\phu-2024-13-05-08-error.log",
+            "hash": "3a91b5659b29cfb7b28e11f04945d1b1c98924bf1b8da95e2e9443196105da40"
+        },
+        {
+            "date": 1715623451862,
+            "name": "C:\\Web Development Next Level batch-2\\PH-HealthCare\\PH-HealthCare-Server\\logs\\winston\\errors\\phu-2024-14-05-00-error.log",
+            "hash": "15b12925d1a1e9b83f926baf24f11eb980a256005d0b23d19a05878bfbe932cf"
+        },
+        {
+            "date": 1715807146181,
+            "name": "C:\\Web Development Next Level batch-2\\PH-HealthCare\\PH-HealthCare-Server\\logs\\winston\\errors\\phu-2024-16-05-03-error.log",
+            "hash": "c2bd467b58aed5f960aab2c9750eee319240bcd1dd0a0b35aff57bb0b5136a5b"
+        },
+        {
+            "date": 1715887744242,
+            "name": "C:\\Web Development Next Level batch-2\\PH-HealthCare\\PH-HealthCare-Server\\logs\\winston\\errors\\phu-2024-17-05-01-error.log",
+            "hash": "c7f9c3eac924774fc6abda37a0d67f08e8b7cf1d9c13892965121668c38a2260"
+        },
+        {
+            "date": 1716745944996,
+            "name": "C:\\Web Development Next Level batch-2\\PH-HealthCare\\PH-HealthCare-Server\\logs\\winston\\errors\\phu-2024-26-05-23-error.log",
+            "hash": "6cedce6a0cbe11cf4d30a6d797a07a69170928f14e05ff62ef0efd5b32a95581"
+        }
+    ],
+    "hashType": "sha256"
+}
