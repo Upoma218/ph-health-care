@@ -8,13 +8,13 @@ export type IDoctorFilterRequest = {
 
 export type IDoctorUpdate = {
   name: string;
-  profilePhoto: string;
+  profilePhoto?: string;
   contactNumber: string;
   address: string;
   registrationNumber: string;
   experience: number;
   gender: "MALE" | "FEMALE";
-  apointmentFee: number;
+  appointmentFee: number;
   qualification: string;
   currentWorkingPlace: string;
   designation: string;

@@ -8,9 +8,7 @@ const create = z.object({
     name: z.string({
       required_error: "Name is required",
     }),
-    profilePhoto: z.string({
-      required_error: "Profile Photo is required",
-    }),
+    profilePhoto: z.string().optional(),
     contactNumber: z.string({
       required_error: "Contact Number is required",
     }),
@@ -23,7 +21,7 @@ const create = z.object({
     gender: z.string({
       required_error: "Gender is required",
     }),
-    apointmentFee: z.number({
+    appointmentFee: z.number({
       required_error: "Blood group is required",
     }),
     qualification: z.string({
@@ -46,7 +44,7 @@ const update = z.object({
     registrationNumber: z.string().optional(),
     experience: z.number().optional(),
     gender: z.string().optional(),
-    apointmentFee: z.number().optional(),
+    appointmentFee: z.number().optional(),
     qualification: z.string().optional(),
     currentWorkingPlace: z.string().optional(),
     designation: z.string().optional(),
